@@ -9,10 +9,19 @@ import {
 } from '@nestjs/common';
 import { CloudinaryService } from './cloudinary/cloudinary.service';
 import { FileInterceptor } from '@nestjs/platform-express';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private cloudinary: CloudinaryService) {}
+  constructor(
+    private cloudinary: CloudinaryService,
+    private appService: AppService,
+  ) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
 
   @Post('cover')
   @UseInterceptors(FileInterceptor('file'))
