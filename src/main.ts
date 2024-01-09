@@ -8,6 +8,7 @@ async function bootstrap() {
       origin: 'https://voyance-global.vercel.app',
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true,
     },
   });
   app.use(bodyParser.json({ limit: '50mb' })); // Augmentez la limite selon vos besoins
