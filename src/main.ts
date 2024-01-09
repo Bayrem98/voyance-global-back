@@ -8,8 +8,8 @@ async function bootstrap() {
       origin: '*',
     },
   });
-  app.use(bodyParser.json({ limit: '50mb' })); // ajustez la limite selon vos besoins
-  app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+  app.use(bodyParser.json({ limit: '100mb' })); // ajustez la limite selon vos besoins
+  app.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
   await app.listen(process.env.PORT || 5000);
 }
 bootstrap();
