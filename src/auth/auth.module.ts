@@ -8,7 +8,7 @@ import { JwtStrategy } from './jwt.strategy';
 import { CurrentUserInterceptor } from './user.interceptor';
 import { AuthController } from './auth.controller';
 
-export const jwtConstants = {
+export const jwtConstantss = {
   secret: 'g§ueve45u§eyvZeicne',
 };
 
@@ -17,7 +17,7 @@ export const jwtConstants = {
     UserModule,
     PassportModule,
     JwtModule.register({
-      secret: jwtConstants.secret,
+      secret: jwtConstantss.secret,
       signOptions: { expiresIn: 60 * 60 * 8 + 's' },
     }),
   ],
