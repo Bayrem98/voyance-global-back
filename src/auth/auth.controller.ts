@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 import { CurrentUserInterceptor } from './user.interceptor';
 import { AuthService } from './auth.service';
-import { User } from 'src/user/schemas/user.schema';
+import { User } from 'src/user/user.interface';
 import CreateUserDto from 'src/user/dto/create-user.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 
